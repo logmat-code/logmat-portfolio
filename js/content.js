@@ -13,7 +13,7 @@ window.PORTFOLIO_CONTENT = {
     author: "Matías Agustín Delega",
     role: "Independent Game Developer & Music Producer",
     location: "Buenos Aires, Argentina",
-    canonicalUrl: ""
+    canonicalUrl: "https://logmat-code.github.io/logmat-portfolio/"
   },
 
   hero: {
