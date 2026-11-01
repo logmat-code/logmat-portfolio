@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1400" width="100%" height="100%" preserveAspectRatio="xMidYMin slice">
+  <defs>
+    <!-- Filter 1: Tactile Metallic Micro-Grain -->
+    <filter id="metalGrain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="noise" seed="91"/>
+      <feColorMatrix type="matrix" values="0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0 0 0 0.28 0" in="noise" result="coloredNoise"/>
+      <feBlend mode="overlay" in="SourceGraphic" in2="coloredNoise"/>
+    </filter>
+
+    <!-- Filter 2: Heavy Acid Corrosion & Ink Bleed -->
+    <filter id="corrosionBleed" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="turbulence" baseFrequency="0.018 0.035" numOctaves="4" result="roughNoise" seed="47"/>
+      <feDisplacementMap in="SourceGraphic" in2="roughNoise" scale="32" xChannelSelector="R" yChannelSelector="G" result="distorted"/>
+      <feGaussianBlur stdDeviation="1.5" in="distorted"/>
+    </filter>
+
+    <!-- Filter 3: Rough Eroded Edges for Structural Plates -->
+    <filter id="plateErosion" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03 0.05" numOctaves="3" result="edgeNoise" seed="63"/>
+      <feDisplacementMap in="SourceGraphic" in2="edgeNoise" scale="22" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <!-- Metal Plate Gradients -->
+    <linearGradient id="steelPlate1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2533" stop-opacity="0.85"/>
+      <stop offset="45%" stop-color="#121620" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#07090d" stop-opacity="0.98"/>
+    </linearGradient>
+
+    <linearGradient id="steelPlate2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a3346" stop-opacity="0.75"/>
+      <stop offset="50%" stop-color="#151a24" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#080a0e" stop-opacity="0.98"/>
+    </linearGradient>
+
+    <linearGradient id="slashBright" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#55647e" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#8093b1" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#b4c4dc" stop-opacity="0.45"/>
+      <stop offset="65%" stop-color="#8093b1" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#55647e" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="slashDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#050608" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="seamGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3d495e" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#60718d" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#3d495e" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <radialGradient id="vignette" cx="50%" cy="50%" r="50%">
+      <stop offset="65%" stop-color="#07080a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#07080a" stop-opacity="0.8"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Base Charcoal Ground -->
+  <rect width="1440" height="1400" fill="#07080a"/>
+
+  <!-- ====================================================================
+       LAYER 1: Massive Structural Steel Slabs & Brutalist Geometry
+       ==================================================================== -->
+  <g filter="url(#plateErosion)" opacity="0.85">
+    <!-- Heavy Left Diagonal Plate -->
+    <polygon points="-80,-40 680,1450 490,1450 -260,-40" fill="url(#steelPlate1)"/>
+    
+    <!-- Heavy Right Diagonal Counter-Plate -->
+    <polygon points="1520,-60 760,1450 950,1450 1710,-60" fill="url(#steelPlate2)"/>
+    
+    <!-- Top-Right Heavy Corner Slab -->
+    <polygon points="980,-20 1460,-20 1460,540 840,160" fill="#131722"/>
+    
+    <!-- Bottom-Left Heavy Corner Slab -->
+    <polygon points="-40,820 440,640 520,980 -40,1380" fill="#0f131a"/>
+    
+    <!-- Transverse Industrial Cross-Brace -->
+    <polygon points="120,-80 1480,940 1400,1020 40,-20" fill="#161b26"/>
+    <polygon points="-120,980 1320,120 1400,180 -40,1040" fill="#181e2b"/>
+  </g>
+
+  <!-- ====================================================================
+       LAYER 2: Acid Wash, Iron Corrosion & Dark Ink Spatter
+       ==================================================================== -->
+  <g filter="url(#corrosionBleed)" opacity="0.65">
+    <!-- Left Flank Corrosion Clusters -->
+    <path d="M-50,150 Q180,240 120,480 T-60,780 Z" fill="#0d1017"/>
+    <path d="M20,620 Q220,720 160,940 T-40,1200 Z" fill="#141924"/>
+    
+    <!-- Right Flank Corrosion Clusters -->
+    <path d="M1490,200 Q1260,340 1340,580 T1500,880 Z" fill="#11151e"/>
+    <path d="M1450,780 Q1220,920 1300,1140 T1480,1360 Z" fill="#171d28"/>
+    
+    <!-- Center Atmosphere Dissolves -->
+    <ellipse cx="720" cy="380" rx="460" ry="240" fill="#090c12"/>
+    <ellipse cx="720" cy="1020" rx="520" ry="280" fill="#0a0d13"/>
+  </g>
+
+  <!-- ====================================================================
+       LAYER 3: Gothic Industrial Slits, Slashes & Steel Bevel Edges
+       ==================================================================== -->
+  <g opacity="0.9">
+    <!-- Primary Razor Slash 1 (Down-Right) -->
+    <path d="M-60,280 L1500,880 L1495,894 L-65,294 Z" fill="url(#slashDark)"/>
+    <path d="M-60,282 L1500,882 L1498,885 L-62,285 Z" fill="url(#slashBright)"/>
+
+    <!-- Primary Razor Slash 2 (Up-Right) -->
+    <path d="M1500,240 L-60,1040 L-55,1054 L1505,254 Z" fill="url(#slashDark)"/>
+    <path d="M1500,242 L-60,1042 L-58,1045 L1502,245 Z" fill="url(#slashBright)"/>
+
+    <!-- Secondary Structural Fractures -->
+    <line x1="-40" y1="120" x2="680" y2="1380" stroke="#485770" stroke-width="1.5" stroke-dasharray="140 12 30 8" opacity="0.4"/>
+    <line x1="1480" y1="80" x2="760" y2="1380" stroke="#485770" stroke-width="1.5" stroke-dasharray="180 16 40 10" opacity="0.4"/>
+
+    <!-- Industrial Rivet Seam Markers along Margins -->
+    <line x1="90" y1="0" x2="90" y2="1400" stroke="#364254" stroke-width="1" stroke-dasharray="4 28" opacity="0.45"/>
+    <line x1="94" y1="0" x2="94" y2="1400" stroke="#000000" stroke-width="1" stroke-dasharray="4 28" opacity="0.6"/>
+    
+    <line x1="1350" y1="0" x2="1350" y2="1400" stroke="#364254" stroke-width="1" stroke-dasharray="4 28" opacity="0.45"/>
+    <line x1="1354" y1="0" x2="1354" y2="1400" stroke="#000000" stroke-width="1" stroke-dasharray="4 28" opacity="0.6"/>
+
+    <!-- Technical Crosshairs / Cold Steel Accents (Pure abstract geometry, NO text) -->
+    <circle cx="1260" cy="220" r="120" fill="none" stroke="#323c4d" stroke-width="1" stroke-dasharray="12 40 2 12" opacity="0.4"/>
+    <circle cx="1260" cy="220" r="160" fill="none" stroke="#232b38" stroke-width="0.75" opacity="0.25"/>
+    
+    <circle cx="180" cy="1160" r="140" fill="none" stroke="#323c4d" stroke-width="1" stroke-dasharray="16 36 3 10" opacity="0.4"/>
+    <circle cx="180" cy="1160" r="190" fill="none" stroke="#232b38" stroke-width="0.75" opacity="0.25"/>
+  </g>
+
+  <!-- ====================================================================
+       LAYER 4: Full-Surface Metal Film Grain & Micro-Texture
+       ==================================================================== -->
+  <rect width="1440" height="1400" fill="#080a0e" filter="url(#metalGrain)" opacity="0.4"/>
+
+  <!-- ====================================================================
+       LAYER 5: Deep Atmospheric Edge Vignette (Seamless repeat compatible)
+       ==================================================================== -->
+  <rect width="1440" height="1400" fill="url(#vignette)"/>
+
+  <!-- Top and Bottom Blending Gradients for smooth vertical repeat-y -->
+  <rect x="0" y="0" width="1440" height="90" fill="url(#seamGlow)" opacity="0.15"/>
+</svg>

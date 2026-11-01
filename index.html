@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGMAT — Matías Agustín Delega | Independent Game Developer &amp; Music Producer</title>
+  <meta name="description" content="Official portfolio of LOGMAT (Matías Agustín Delega) — independent game developer and music producer based in Buenos Aires, Argentina. Play Cursed Harvest, My Shadow Quit, and listen to original music on Spotify and SoundCloud.">
+  <meta name="author" content="Matías Agustín Delega">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#07080a">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LOGMAT">
+  <meta property="og:title" content="LOGMAT — Independent Game Developer &amp; Music Producer">
+  <meta property="og:description" content="I'm Matías Agustín Delega, an independent game developer and music producer based in Buenos Aires, Argentina. Here you'll find my games, music, and the work behind them.">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LOGMAT — Independent Game Developer &amp; Music Producer">
+  <meta name="twitter:description" content="Portfolio of Matías Agustín Delega — independent game developer and music producer in Buenos Aires, Argentina.">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Editorial Industrial Typography: Barlow Condensed (Bold condensed headlines), Inter (clean reading), JetBrains Mono (technical specs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main-title" class="skip-link visually-hidden">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#home" class="brand-link" aria-label="LOGMAT — Home">
+          <span class="brand-glyph" aria-hidden="true">■</span>
+          <span class="brand-text">LOGMAT</span>
+        </a>
+
+        <button
+          type="button"
+          id="mobile-menu-toggle"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="menu-toggle-label">Menu</span>
+          <svg class="menu-icon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+            <path class="line-top" d="M3 7h18" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+            <path class="line-bottom" d="M3 17h18" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+          </svg>
+        </button>
+
+        <ul id="primary-nav-menu" class="nav-list" role="list">
+          <li><a href="#home" class="nav-link" data-nav="home">Home</a></li>
+          <li><a href="#games" class="nav-link nav-link-priority" data-nav="games">Games</a></li>
+          <li><a href="#music" class="nav-link" data-nav="music">Music</a></li>
+          <li><a href="#about" class="nav-link" data-nav="about">About</a></li>
+          <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- 1. HOME / HERO -->
+    <section id="home" class="hero-section" aria-labelledby="main-title">
+      <div class="container hero-grid">
+        <div class="hero-main">
+          <div class="hero-eyebrow" aria-label="Location and disciplines">
+            <span class="eyebrow-segment">BUENOS AIRES // AR</span>
+            <span class="eyebrow-divider" aria-hidden="true">/</span>
+            <span class="eyebrow-segment">GAMES &amp; SOUND</span>
+          </div>
+
+          <h1 id="main-title" tabindex="-1" class="hero-title">LOGMAT</h1>
+          <p id="hero-subtitle" class="hero-subtitle">Independent Game Developer &amp; Music Producer</p>
+          <p id="hero-description" class="hero-description">
+            I'm Matías Agustín Delega, an independent game developer and music producer based in Buenos Aires, Argentina. Here you'll find my games, music, and the work behind them.
+          </p>
+
+          <div class="hero-actions">
+            <a id="hero-cta-primary" href="#games" class="btn btn-primary">
+              <span>Play My Games</span>
+              <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18">
+                <path d="M4 10h11m0 0l-4-4m4 4l-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+              </svg>
+            </a>
+            <a id="hero-cta-secondary" href="#music" class="btn btn-secondary">
+              <span>Listen to My Music</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Featured Project Showcase (Replaces empty index panel) -->
+        <aside class="hero-featured-card" aria-label="Featured playable game">
+          <div class="featured-card-header">
+            <span class="mono-tag-accent">FEATURED RELEASE // PLAYABLE NOW</span>
+            <span class="featured-jam-tag">Synty Spooky Jam 2026</span>
+          </div>
+          <div class="featured-media-frame">
+            <img
+              src="assets/games/cursed-harvest-cover.png"
+              alt="Cursed Harvest folk-horror roguelike cover banner"
+              width="640"
+              height="360"
+              fetchpriority="high"
+            >
+            <div class="featured-overlay">
+              <span class="featured-badge">40th Place · Synty Spooky Jam 2026</span>
+            </div>
+          </div>
+          <div class="featured-card-body">
+            <div class="featured-title-row">
+              <h2 class="featured-title">Cursed Harvest</h2>
+              <span class="featured-platform">WebGL / Browser</span>
+            </div>
+            <p class="featured-summary">
+              A folk-horror survivor roguelike with escalating enemy waves, cursed rituals, and persistent upgrades.
+            </p>
+            <div class="featured-card-actions" id="featured-card-actions">
+              <a
+                href="https://logmat.itch.io/cursed-harvest"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary btn-play-featured"
+                id="featured-primary-action"
+                aria-label="Play Cursed Harvest on itch.io"
+              >
+                <span>Play on itch.io</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <button
+                type="button"
+                class="btn btn-secondary btn-inspect-featured"
+                data-inspect-game="cursed-harvest"
+                aria-label="Inspect Cursed Harvest details"
+              >
+                <span>View Details</span>
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 2. GAMES -->
+    <section id="games" class="section section-games" aria-labelledby="games-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-top">
+            <span id="games-label" class="section-index">01 // INTERACTIVE WORKS</span>
+            <span class="section-rule" aria-hidden="true"></span>
+          </div>
+          <div class="section-header-main">
+            <h2 id="games-heading" class="section-title">Games</h2>
+            <p id="games-intro" class="section-intro">
+              Explore my independent game projects and development work.
+            </p>
+          </div>
+        </div>
+
+        <!-- PUBLISHED & JAM GAMES (Real screenshots, Play Here button & details) -->
+        <div class="games-subsection">
+          <div class="subsection-header">
+            <h3 class="subsection-title">Published &amp; Game Jams</h3>
+            <span class="subsection-note">Playable in-browser · Official WebGL Builds</span>
+          </div>
+          <div id="games-published-grid" class="games-primary-grid" role="list"></div>
+        </div>
+
+        <!-- IN DEVELOPMENT (Mobile runners & arcade projects) -->
+        <div class="games-subsection in-dev-subsection">
+          <div class="subsection-header">
+            <h3 class="subsection-title">Projects in Development</h3>
+            <span class="subsection-note">Mobile &amp; Arcade Prototypes · Unity C#</span>
+          </div>
+          <div id="games-dev-grid" class="games-dev-grid" role="list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. MUSIC -->
+    <section id="music" class="section section-music" aria-labelledby="music-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-top">
+            <span id="music-label" class="section-index section-index-music">02 // SONIC OUTPUT</span>
+            <span class="section-rule" aria-hidden="true"></span>
+          </div>
+          <div class="section-header-main">
+            <h2 id="music-heading" class="section-title">Music</h2>
+            <p id="music-intro" class="section-intro">
+              Music by LOGMAT, combining rock, metal, industrial sounds, and synthesizers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Working Media Center with Spotify & SoundCloud Tabs -->
+        <div class="music-console">
+          <div class="music-console-header">
+            <div class="music-tab-list" role="tablist" aria-label="Streaming Player Selector">
+              <button
+                type="button"
+                id="tab-spotify"
+                role="tab"
+                class="music-tab-btn is-active"
+                aria-selected="true"
+                aria-controls="panel-spotify"
+                data-target="spotify"
+              >
+                <span class="tab-indicator" aria-hidden="true"></span>
+                <span>Spotify</span>
+              </button>
+              <button
+                type="button"
+                id="tab-soundcloud"
+                role="tab"
+                class="music-tab-btn"
+                aria-selected="false"
+                aria-controls="panel-soundcloud"
+                data-target="soundcloud"
+              >
+                <span class="tab-indicator" aria-hidden="true"></span>
+                <span>SoundCloud</span>
+              </button>
+            </div>
+
+            <div class="music-external-links" id="music-external-links">
+              <a
+                href="https://open.spotify.com/artist/5Zq2V6HMOv0bzVRYX0ett6"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-external-profile"
+                id="active-player-external-link"
+              >
+                <span>Open in Spotify</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="music-panels-container">
+            <!-- Spotify Panel -->
+            <div
+              id="panel-spotify"
+              role="tabpanel"
+              class="music-tabpanel is-active"
+              aria-labelledby="tab-spotify"
+            >
+              <div class="player-wrapper player-wrapper-spotify">
+                <iframe
+                  id="spotify-iframe"
+                  title="LOGMAT on Spotify"
+                  src="https://open.spotify.com/embed/artist/5Zq2V6HMOv0bzVRYX0ett6?utm_source=generator&theme=0"
+                  width="100%"
+                  height="352"
+                  loading="lazy"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- SoundCloud Panel -->
+            <div
+              id="panel-soundcloud"
+              role="tabpanel"
+              class="music-tabpanel"
+              aria-labelledby="tab-soundcloud"
+              hidden
+            >
+              <div class="player-wrapper player-wrapper-soundcloud">
+                <iframe
+                  id="soundcloud-iframe"
+                  title="Mat-R // LOGMAT on SoundCloud"
+                  src="https://w.soundcloud.com/player/?visual=false&url=https%3A%2F%2Fapi.soundcloud.com%2Fusers%2F83367280&show_artwork=true&color=%23ff4d00"
+                  width="100%"
+                  height="352"
+                  loading="lazy"
+                  allow="autoplay; encrypted-media"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="music-console-footer">
+            <span class="mono-note">No autoplay · Embedded players load on-demand when approaching viewport</span>
+            <div class="music-meta-tags">
+              <span class="meta-pill">Analog / Dawless</span>
+              <span class="meta-pill">Techno &amp; Metal Influences</span>
+              <span class="meta-pill">Sound Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ABOUT -->
+    <section id="about" class="section section-about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-top">
+            <span id="about-label" class="section-index">03 // PROFILE</span>
+            <span class="section-rule" aria-hidden="true"></span>
+          </div>
+          <div class="section-header-main">
+            <h2 id="about-heading" class="section-title">About</h2>
+          </div>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-narrative">
+            <p id="about-lead" class="about-lead">
+              I’m Matías Agustín Delega, an independent game developer and music producer based in Buenos Aires, Argentina. I develop games and produce music as LOGMAT, combining interactive projects with audio production.
+            </p>
+            <div id="about-paragraphs" class="about-body">
+              <p>
+                As LOGMAT, game development focuses on Unity game and level design, gameplay prototyping, and mobile and WebGL release workflows. Development pairs hands-on playtesting, manual QA, and regression reporting with AI-assisted development tools (Claude Code, Antigravity) and version control in GitHub.
+              </p>
+              <p>
+                Audio work is backed by professional experience in independent music production, managing record labels (Butterfly Records, Reptile Sounds), and teaching Ableton Live, composition, sound design, mixing, and mastering.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-specs">
+            <h3 class="specs-heading">Profile Specifications</h3>
+            <dl id="about-facts" class="specs-list">
+              <div class="specs-row">
+                <dt>Name</dt>
+                <dd>Matías Agustín Delega</dd>
+              </div>
+              <div class="specs-row">
+                <dt>Brand</dt>
+                <dd>LOGMAT</dd>
+              </div>
+              <div class="specs-row">
+                <dt>Location</dt>
+                <dd>Buenos Aires, Argentina</dd>
+              </div>
+              <div class="specs-row">
+                <dt>Primary Engine</dt>
+                <dd>Unity (Android &amp; WebGL Releases)</dd>
+              </div>
+              <div class="specs-row">
+                <dt>Audio Production</dt>
+                <dd>Ableton Live (Sound Design, Mixing &amp; Mastering)</dd>
+              </div>
+              <div class="specs-row">
+                <dt>Education &amp; Training</dt>
+                <dd>Game Development with Unity (UGameStudios) · Advanced Music Production (ARJAUS) · Graphic Design (IAC)</dd>
+              </div>
+            </dl>
+            <div class="about-cv-wrap">
+              <a href="assets/docs/Matias_Agustin_Delega_CV_EN.pdf" class="btn btn-secondary btn-sm" download aria-label="Download Matías Agustín Delega CV in PDF format">
+                <span>Download CV (PDF)</span>
+                <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills & Disciplines Container -->
+        <div id="about-skills-block" class="about-skills-section">
+          <h3 class="specs-heading">Core Skills &amp; Competencies</h3>
+          <div id="about-skills-grid" class="skills-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CONTACT -->
+    <section id="contact" class="section section-contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-top">
+            <span id="contact-label" class="section-index">04 // DIRECT CHANNELS</span>
+            <span class="section-rule" aria-hidden="true"></span>
+          </div>
+          <div class="section-header-main">
+            <h2 id="contact-heading" class="section-title">Contact</h2>
+            <p id="contact-description" class="section-intro">
+              Get in touch about game development opportunities, collaborations, or music production.
+            </p>
+          </div>
+        </div>
+
+        <div id="contact-content" class="contact-content"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="brand-link">
+          <span class="brand-glyph" aria-hidden="true">■</span>
+          <span class="brand-text">LOGMAT</span>
+        </a>
+        <p class="footer-meta">Matías Agustín Delega — Buenos Aires, Argentina</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav-list" role="list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#music">Music</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       NATIVE IN-PORTFOLIO PLAYABLE GAME MODAL DIALOG (<dialog>)
+       Only loads the playable build iframe upon explicit "Play Here" click.
+       Destroys iframe immediately on close to kill audio and release WebGL memory.
+       ========================================================================= -->
+  <dialog id="game-player-dialog" class="game-player-dialog" closedby="any" aria-labelledby="player-game-title">
+    <div class="player-dialog-sheet">
+      <header class="player-dialog-header">
+        <div class="player-header-left">
+          <span class="player-live-dot" aria-hidden="true"></span>
+          <h2 id="player-game-title" class="player-dialog-title">Game Title</h2>
+          <span id="player-game-platform" class="player-dialog-meta">WebGL / Browser</span>
+        </div>
+        <div class="player-header-right">
+          <button
+            type="button"
+            id="player-fullscreen-btn"
+            class="dialog-tool-btn"
+            aria-label="Toggle fullscreen"
+            title="Toggle fullscreen"
+          >
+            <span aria-hidden="true">⛶</span> Fullscreen
+          </button>
+          <a
+            id="player-itch-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="dialog-tool-btn"
+            aria-label="Open on itch.io"
+          >
+            <span>Open on itch.io</span> ↗
+          </a>
+          <button
+            type="button"
+            id="player-close-btn"
+            class="dialog-close-btn"
+            autofocus
+            aria-label="Close playable game"
+          >
+            <span>Close</span>
+            <span class="close-key-hint" aria-hidden="true">ESC</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="player-stage-container" id="player-stage-container">
+        <!-- Playable iframe injected dynamically here, then destroyed on exit -->
+      </div>
+
+      <footer class="player-dialog-footer">
+        <div class="player-controls-banner" id="player-controls-banner">
+          <!-- Keyboard / interaction controls rendered here -->
+        </div>
+      </footer>
+    </div>
+  </dialog>
+
+  <!-- =========================================================================
+       PROJECT DETAILS & TECHNICAL SHEET DIALOG (<dialog>)
+       ========================================================================= -->
+  <dialog id="game-sheet-dialog" class="game-sheet-dialog" closedby="any" aria-labelledby="dialog-project-title">
+    <div class="dialog-sheet">
+      <header class="dialog-header">
+        <div class="dialog-header-meta">
+          <span id="dialog-project-code" class="mono-tag">PRJ</span>
+          <span id="dialog-project-status" class="status-badge" hidden></span>
+        </div>
+        <form method="dialog" class="dialog-close-form">
+          <button type="submit" value="close" class="dialog-close-btn" autofocus aria-label="Close project sheet">
+            <span>Close</span>
+            <span class="close-key-hint" aria-hidden="true">ESC</span>
+          </button>
+        </form>
+      </header>
+
+      <div id="dialog-project-body" class="dialog-body">
+        <h2 id="dialog-project-title" class="dialog-title">Project Technical Sheet</h2>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
