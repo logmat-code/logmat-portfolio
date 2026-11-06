@@ -40,11 +40,7 @@ window.PORTFOLIO_CONTENT = {
     intro: "Explore my independent game projects and development work.",
 
     /**
-     * Published & Jam Games (Public on itch.io)
-     * NOTE: itch.io enforces Content-Security-Policy (frame-ancestors 'self' https://itch.io)
-     * on public game pages. If a creator-authorized direct embed URL or standalone WebGL
-     * build is provided in `play.embedBuildUrl`, the in-portfolio player will run it.
-     * Otherwise, a functional "Play on itch.io ↗" button directs visitors cleanly to the game.
+     * Published & Jam Games (Google Play & itch.io)
      */
     published: [
       {
@@ -94,7 +90,6 @@ window.PORTFOLIO_CONTENT = {
         },
         play: {
           itchPageUrl: "https://logmat.itch.io/cursed-harvest",
-          // Configured when creator-provided direct embed or local WebGL export is available:
           embedBuildUrl: ""
         }
       },
@@ -151,35 +146,94 @@ window.PORTFOLIO_CONTENT = {
           itchPageUrl: "https://logmat.itch.io/my-shadow-quit",
           embedBuildUrl: ""
         }
+      },
+      {
+        id: "1-percent-battery",
+        code: "MOB-01",
+        title: "1% Battery",
+        badge: "Google Play Release",
+        badgeUrl: "https://play.google.com/store/apps/details?id=com.logmat.onepercentbattery",
+        badgeActionLabel: "View on Google Play",
+        summary:
+          "A mobile arcade runner built around quick sessions, readable obstacles, and responsive character feedback. Designed as a short, playable break from endless scrolling.",
+        extendedDescription:
+          "1% BATTERY. challenges players to navigate dynamic courses and manage crucial energy levels. Features continuous runner action across three distinct game modes, collectible energy power-ups, daily obstacle challenges, and unlockable character skins.",
+        status: "Published / Mobile Release",
+        platform: "Android (Google Play)",
+        engine: "Unity",
+        controls: [
+          { key: "Touch / Swipe", action: "Navigate courses & avoid obstacles" },
+          { key: "Tap", action: "Jump & collect energy batteries" },
+          { key: "UI Touch", action: "Equip skins & select game modes" }
+        ],
+        media: {
+          coverImage: "assets/games/1-percent-battery-cover.png",
+          coverAlt: "1% Battery mobile arcade runner cover on Google Play",
+          screenshots: [
+            {
+              src: "assets/games/1-percent-battery-screen-1.png",
+              alt: "1% Battery course obstacle navigation gameplay",
+              caption: "Dynamic obstacle courses and energy management"
+            },
+            {
+              src: "assets/games/1-percent-battery-screen-2.png",
+              alt: "1% Battery fast-paced reflex runner gameplay",
+              caption: "Quick, focused endless runner sessions"
+            }
+          ]
+        },
+        play: {
+          googlePlayUrl: "https://play.google.com/store/apps/details?id=com.logmat.onepercentbattery"
+        }
+      },
+      {
+        id: "gravity-switch",
+        code: "MOB-02",
+        title: "Gravity Switch",
+        badge: "Google Play Release",
+        badgeUrl: "https://play.google.com/store/apps/details?id=com.logmat.gravityswitch",
+        badgeActionLabel: "View on Google Play",
+        summary:
+          "A mobile arcade game built around a simple interaction: switching gravity. A focused control scheme turns movement and timing into the core challenge.",
+        extendedDescription:
+          "Defy gravity. Dodge obstacles. Beat your best. An arcade runner where inverting gravity between the floor and ceiling is the key to survival: time your moves, chase personal best distances, and collect coins in quick, focused play sessions.",
+        status: "Published / Mobile Release",
+        platform: "Android (Google Play)",
+        engine: "Unity",
+        controls: [
+          { key: "Tap Screen", action: "Switch gravity between floor and ceiling" },
+          { key: "Timing", action: "Dodge obstacles and navigate hazard corridors" }
+        ],
+        media: {
+          coverImage: "assets/games/gravity-switch-cover.png",
+          coverAlt: "Gravity Switch mobile arcade runner cover on Google Play",
+          screenshots: [
+            {
+              src: "assets/games/gravity-switch-screen-1.png",
+              alt: "Gravity Switch floor and ceiling inversion gameplay",
+              caption: "Alternate between floor and ceiling to survive"
+            },
+            {
+              src: "assets/games/gravity-switch-screen-2.png",
+              alt: "Gravity Switch minimalist hazard avoidance",
+              caption: "Precision timing and distance record challenges"
+            }
+          ]
+        },
+        play: {
+          googlePlayUrl: "https://play.google.com/store/apps/details?id=com.logmat.gravityswitch"
+        }
       }
     ],
 
     /**
-     * Projects in Development (Strictly the 7 confirmed titles)
-     * Descriptions reflect project concepts in English. Confirmed engines only.
+     * Projects in Development (Provisional and active prototypes)
+     * Descriptions reflect verified concepts from documentation and CV.
      */
     inDevelopment: [
       {
-        id: "1-percent-battery",
-        code: "DEV-01",
-        title: "1% Battery",
-        status: "In Development",
-        summary:
-          "A mobile arcade runner built around quick sessions, readable obstacles, and responsive character feedback. Designed as a short, playable break from endless scrolling.",
-        engine: "Unity"
-      },
-      {
-        id: "gravity-switch",
-        code: "DEV-02",
-        title: "Gravity Switch",
-        status: "In Development",
-        summary:
-          "A mobile arcade game built around a simple interaction: switching gravity. A focused control scheme turns movement and timing into the core challenge.",
-        engine: "Unity"
-      },
-      {
         id: "the-floor-is-dying",
-        code: "DEV-03",
+        code: "DEV-01",
         title: "The Floor Is Dying",
         status: "In Development",
         summary:
@@ -188,7 +242,7 @@ window.PORTFOLIO_CONTENT = {
       },
       {
         id: "the-last-train",
-        code: "DEV-04",
+        code: "DEV-02",
         title: "The Last Train",
         status: "In Development",
         summary:
@@ -197,7 +251,7 @@ window.PORTFOLIO_CONTENT = {
       },
       {
         id: "necromancers-deck",
-        code: "DEV-05",
+        code: "DEV-03",
         title: "Necromancers Deck",
         status: "In Development",
         summary:
@@ -206,7 +260,7 @@ window.PORTFOLIO_CONTENT = {
       },
       {
         id: "dont-follow-my-voice",
-        code: "DEV-06",
+        code: "DEV-04",
         title: "Don’t Follow My Voice",
         status: "In Development",
         summary:
@@ -214,13 +268,37 @@ window.PORTFOLIO_CONTENT = {
       },
       {
         id: "last-light",
-        code: "DEV-07",
+        code: "DEV-05",
         title: "Last Light",
         status: "In Development",
         summary:
           "A first-person horror game set in an underground power station. Share a limited battery between your flashlight, which repels a stalking creature, and three terminals needed to unlock the escape elevator.",
         extendedDescription:
           "Designed for a 5–8 minute session, with exploration, energy management, and a final return to the elevator."
+      },
+      {
+        id: "memory-ghost",
+        code: "DEV-06",
+        title: "Memory Ghost",
+        status: "In Development",
+        summary:
+          "A narrative investigation game concept exploring case structure, evidence and deduction systems, and production direction for a 2D pixel-art vertical slice."
+      },
+      {
+        id: "flesh-circuit",
+        code: "DEV-07",
+        title: "Flesh Circuit",
+        status: "In Development",
+        summary:
+          "A 2D metroidvania concept designed for Metroidvania Month Finale, exploring interconnected exploration, ability-based progression, and focused scope."
+      },
+      {
+        id: "recoil-express",
+        code: "DEV-08",
+        title: "Recoil Express",
+        status: "In Development",
+        summary:
+          "A roguelite project exploring upgrade rarity, capped stacking, achievement unlocks, shops, healing rules, and reward progression."
       }
     ]
   },
@@ -319,6 +397,7 @@ window.PORTFOLIO_CONTENT = {
     links: {
       github: "https://github.com/logmat-code",
       itchIo: "https://logmat.itch.io/",
+      googlePlay: "https://play.google.com/store/apps/developer?id=LOGMAT",
       spotify: "https://open.spotify.com/artist/5Zq2V6HMOv0bzVRYX0ett6",
       soundcloud: "https://soundcloud.com/mat-rigozzi/tracks"
     }

@@ -47,6 +47,7 @@
   }
 
   const PLATFORM_LABELS = {
+    googlePlay: "Google Play",
     playStore: "Google Play",
     itchIo: "itch.io",
     github: "GitHub",
@@ -135,6 +136,11 @@
             e.preventDefault();
             openPlayableGameDialog(featuredGame);
           });
+        } else if (isNonEmptyString(featuredGame.play?.googlePlayUrl)) {
+          primaryActionEl.setAttribute("href", featuredGame.play.googlePlayUrl);
+          primaryActionEl.setAttribute("target", "_blank");
+          primaryActionEl.setAttribute("rel", "noopener noreferrer");
+          primaryActionEl.innerHTML = `<span>Get it on Google Play</span> <span aria-hidden="true">↗</span>`;
         } else {
           // itch.io enforces CSP frame-ancestors; direct link opens game on itch.io
           primaryActionEl.setAttribute("href", featuredGame.play?.itchPageUrl || "https://logmat.itch.io/");
@@ -274,6 +280,15 @@
             openPlayableGameDialog(game);
           });
           actionsWrap.appendChild(playBtn);
+        } else if (isNonEmptyString(game.play?.googlePlayUrl)) {
+          // Google Play external store button
+          const playStoreBtn = createEl("a", "btn btn-primary btn-google-play");
+          playStoreBtn.href = game.play.googlePlayUrl;
+          playStoreBtn.target = "_blank";
+          playStoreBtn.rel = "noopener noreferrer";
+          playStoreBtn.setAttribute("aria-label", `Get ${game.title} on Google Play`);
+          playStoreBtn.innerHTML = `<span>Get it on Google Play</span> <span aria-hidden="true">↗</span>`;
+          actionsWrap.appendChild(playStoreBtn);
         } else {
           // itch.io external play button
           const itchBtn = createEl("a", "btn btn-primary");
@@ -644,6 +659,12 @@
 
       // Verified Links
       const links = [];
+      if (isNonEmptyString(item.play?.googlePlayUrl)) {
+        links.push({
+          label: "Get it on Google Play",
+          url: item.play.googlePlayUrl
+        });
+      }
       if (isNonEmptyString(item.play?.itchPageUrl)) {
         links.push({
           label: "Play on itch.io",

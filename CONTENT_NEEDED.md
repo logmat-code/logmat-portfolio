@@ -9,6 +9,7 @@ Completed items are marked with `[x]`, and remaining optional or pending items a
 
 - [x] **Professional Emails** (`contact.email`): `matiasrigozzi@gmail.com` and `matr@btyrecords.com` configured with `mailto:` links.
 - [x] **itch.io Profile** (`contact.links.itchIo`): `https://logmat.itch.io/`
+- [x] **Google Play Developer Profile** (`contact.links.googlePlay`): `https://play.google.com/store/apps/developer?id=LOGMAT`
 - [x] **GitHub Profile** (`contact.links.github`): `https://github.com/logmat-code`
 - [x] **Spotify Artist Profile** (`contact.links.spotify` & `music.players.spotify`): `https://open.spotify.com/artist/5Zq2V6HMOv0bzVRYX0ett6`
 - [x] **SoundCloud Profile** (`contact.links.soundcloud` & `music.players.soundcloud`): `https://soundcloud.com/mat-rigozzi/tracks`
@@ -20,9 +21,9 @@ Completed items are marked with `[x]`, and remaining optional or pending items a
 
 ---
 
-## 2. Published & Game Jam Games (`games.published` in `js/content.js`)
+## 2. Published & Official Releases (`games.published` in `js/content.js`)
 
-Both published jam games feature real covers, verified controls, jam awards/badges, and functional "Play on itch.io ↗" buttons.
+Published games feature real covers, verified gameplay screenshots, verified controls, platform badges, and direct actions ("Play on itch.io ↗" or "Get it on Google Play ↗").
 
 ### 2.1 Cursed Harvest
 - [x] **Official Jam**: Synty Spooky Jam — October 2026.
@@ -50,19 +51,49 @@ Both published jam games feature real covers, verified controls, jam awards/badg
   - `assets/games/my-shadow-quit-screen-3.png`
 - [x] **Verified Controls**: A/D or Arrow Keys (Move), Space (Jump), Tab (Switch Wanderer / Shadow), Q (Torch), E (Interact), J (Attack), F (Weapon), Esc (Pause).
 
+### 2.3 1% Battery (Mobile Release)
+- [x] **Official Store**: Google Play (`com.logmat.onepercentbattery`).
+- [x] **Store Link**: `https://play.google.com/store/apps/details?id=com.logmat.onepercentbattery`
+- [x] **Badge**: `"Google Play Release"` linking to store listing.
+- [x] **Platform**: Android (Google Play).
+- [x] **Engine**: Unity.
+- [x] **Action**: Functional `"Get it on Google Play ↗"` button.
+- [x] **Local Assets**:
+  - `assets/games/1-percent-battery-cover.png` (official 500x500 store icon)
+  - `assets/games/1-percent-battery-screen-1.png` (official gameplay screenshot)
+  - `assets/games/1-percent-battery-screen-2.png` (official gameplay screenshot)
+- [x] **Verified Controls**: Touch / Swipe (Courses & Obstacles), Tap (Jump & Energy batteries), UI Touch (Skins & Modes).
+
+### 2.4 Gravity Switch (Mobile Release)
+- [x] **Official Store**: Google Play (`com.logmat.gravityswitch`).
+- [x] **Store Link**: `https://play.google.com/store/apps/details?id=com.logmat.gravityswitch`
+- [x] **Badge**: `"Google Play Release"` linking to store listing.
+- [x] **Platform**: Android (Google Play).
+- [x] **Engine**: Unity.
+- [x] **Action**: Functional `"Get it on Google Play ↗"` button.
+- [x] **Local Assets**:
+  - `assets/games/gravity-switch-cover.png` (official 500x500 store icon)
+  - `assets/games/gravity-switch-screen-1.png` (official gameplay screenshot)
+  - `assets/games/gravity-switch-screen-2.png` (official gameplay screenshot)
+- [x] **Verified Controls**: Tap Screen (Switch gravity between floor and ceiling), Timing (Dodge obstacles and navigate hazard corridors).
+
 ---
 
 ## 3. Projects In Development (`games.inDevelopment` in `js/content.js`)
 
-Secondary section strictly featuring the 7 confirmed in-development titles. Excluded projects: TrackDoctor, Tower Drop, Don’t Fall, ONE SECOND, El salto del moco. No fake mechanics, dates, progress bars, or redundant modal buttons.
+Secondary section strictly featuring verified in-development titles. Excluded projects: TrackDoctor, Tower Drop, Don’t Fall, ONE SECOND, El salto del moco. No fake mechanics, dates, progress bars, or unconfirmed public links.
 
-1. [x] **1% Battery** (`DEV-01`): Verified English concept summary configured. Engine: Unity.
-2. [x] **Gravity Switch** (`DEV-02`): Verified English concept summary configured. Engine: Unity.
-3. [x] **The Floor Is Dying** (`DEV-03`): Verified English concept summary configured. Engine: Unity. (Cross-referenced with CV: original audio and visual asset work).
-4. [x] **The Last Train** (`DEV-04`): Verified English concept summary configured (mechanics presented as planned design concepts). Engine: Unity.
-5. [x] **Necromancers Deck** (`DEV-05`): Exact title preserved. Verified English concept summary configured. Engine: Unity.
-6. [x] **Don’t Follow My Voice** (`DEV-06`): Verified English concept summary configured. No unverified engines or tools added.
-7. [x] **Last Light** (`DEV-07`): Verified English concept summary and extended session scope configured. First-person horror in an underground power station with limited battery flashlight mechanics. Status: In Development.
+1. [x] **The Floor Is Dying** (`DEV-01`): Verified English concept summary configured. Engine: Unity. (Cross-referenced with CV: original audio and visual asset work).
+2. [x] **The Last Train** (`DEV-02`): Verified English concept summary configured (mechanics presented as planned design concepts). Engine: Unity.
+3. [x] **Necromancers Deck** (`DEV-03`): Exact title preserved. Verified English concept summary configured. Engine: Unity.
+4. [x] **Don’t Follow My Voice** (`DEV-04`): Verified English concept summary configured.
+5. [x] **Last Light** (`DEV-05`): Verified English concept summary and extended session scope configured. First-person horror in an underground power station with limited battery flashlight mechanics. Status: In Development.
+6. [x] **Memory Ghost** (`DEV-06`): Narrative investigation concept exploring case structure, evidence and deduction systems, and production direction for a 2D pixel-art vertical slice.
+   - [ ] *Needed when ready for public testing / release*: Public itch.io or store listing, playable build / demo, confirmed game engine, visual asset pack / gameplay screenshots.
+7. [x] **Flesh Circuit** (`DEV-07`): 2D metroidvania concept designed for Metroidvania Month Finale, exploring interconnected exploration and ability-based progression.
+   - [ ] *Needed when ready for public testing / release*: Public itch.io page, playable build / demo, confirmed engine, gameplay screenshots.
+8. [x] **Recoil Express** (`DEV-08`): Roguelite project exploring upgrade rarity, capped stacking, achievement unlocks, shops, and healing rules.
+   - [ ] *Needed when ready for public testing / release*: Public itch.io or store page, playable build / demo, confirmed engine, gameplay screenshots.
 
 ---
 
