@@ -54,18 +54,18 @@ window.PORTFOLIO_CONTENT = {
           "A folk-horror survivor roguelike with escalating enemy waves, cursed rituals, and persistent upgrades.",
         extendedDescription:
           "Fight through escalating waves of enemies, collect Cursed Seeds, survive dangerous Harvest rituals, and build your character both during each run and permanently through the Harvest Essence upgrade system across five distinct realms.",
-        status: "Public / Jam Release",
-        platform: "Browser / WebGL",
+        status: "Released",
+        platform: "Android · Browser",
         jam: "Synty Spooky Jam — October 2026",
         jamResult: "40th Place (Community Choice)",
         engine: "Unity",
         thirdPartyAssetsNotice:
           "Built in Unity using stylized 3D environment and character assets from Synty Studios.",
         controls: [
-          { key: "WASD", action: "Move character" },
-          { key: "ESC", action: "Pause game" },
-          { key: "Mouse", action: "Menus & UI interaction" },
-          { key: "ENTER", action: "Confirm / Continue" }
+          { key: "WASD / Virtual Touch", action: "Move character" },
+          { key: "ESC / Pause", action: "Pause game" },
+          { key: "Mouse / Tap", action: "Menus & UI interaction" },
+          { key: "ENTER / Button", action: "Confirm / Continue" }
         ],
         media: {
           coverImage: "assets/games/cursed-harvest-cover.png",
@@ -89,6 +89,7 @@ window.PORTFOLIO_CONTENT = {
           ]
         },
         play: {
+          googlePlayUrl: "https://play.google.com/store/apps/details?id=com.logmat.cursedharvest",
           itchPageUrl: "https://logmat.itch.io/cursed-harvest",
           embedBuildUrl: ""
         }

@@ -72,7 +72,7 @@ Open `http://localhost:8080` in your web browser.
 All texts, games, music embeds, and contact details are managed in `js/content.js`.
 
 ### 2.1 Published & Official Releases (`games.published`)
-- `Cursed Harvest`: Synty Spooky Jam 2026 (40th Place Community Choice, WebGL).
+- `Cursed Harvest`: Released on Android (Google Play) & Browser (itch.io WebGL, 40th Place Synty Spooky Jam 2026).
 - `My Shadow Quit: The Last Flame`: AI Browser Game Jam 5 (Theme: Torch, WebGL).
 - `1% Battery`: Mobile arcade runner published on Google Play (`com.logmat.onepercentbattery`).
 - `Gravity Switch`: Mobile arcade runner published on Google Play (`com.logmat.gravityswitch`).

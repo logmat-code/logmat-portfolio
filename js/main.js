@@ -71,6 +71,70 @@
       }));
   }
 
+  /**
+   * Reusable component for game action buttons.
+   * Renders Google Play store link, itch.io link, in-portfolio player (if available),
+   * and the technical sheet / details inspection modal button.
+   */
+  function populateGameActionButtons(game, container, options = {}) {
+    if (!container || !game) return;
+    const { isFeatured = false } = options;
+    container.replaceChildren();
+
+    const hasEmbed = isNonEmptyString(game.play?.embedBuildUrl);
+    const hasGooglePlay = isNonEmptyString(game.play?.googlePlayUrl);
+    const hasItch = isNonEmptyString(game.play?.itchPageUrl);
+
+    // 1. Direct in-portfolio playable build (if configured)
+    if (hasEmbed) {
+      const playBtn = createEl("button", "btn btn-primary");
+      playBtn.type = "button";
+      playBtn.setAttribute("data-play-game", game.id);
+      playBtn.setAttribute("aria-label", `Play ${game.title} inside portfolio`);
+      playBtn.innerHTML = `<span>Play Here</span> <span class="play-icon" aria-hidden="true">▶</span>`;
+      playBtn.addEventListener("click", () => {
+        openPlayableGameDialog(game);
+      });
+      container.appendChild(playBtn);
+    }
+
+    // 2. Google Play official store release
+    if (hasGooglePlay) {
+      const playStoreBtn = createEl("a", "btn btn-primary btn-google-play");
+      playStoreBtn.href = game.play.googlePlayUrl;
+      playStoreBtn.target = "_blank";
+      playStoreBtn.rel = "noopener noreferrer";
+      playStoreBtn.setAttribute("aria-label", `Get ${game.title} on Google Play`);
+      playStoreBtn.innerHTML = `<span>Get it on Google Play</span> <span aria-hidden="true">↗</span>`;
+      container.appendChild(playStoreBtn);
+    }
+
+    // 3. itch.io official release
+    if (hasItch) {
+      const itchBtn = createEl("a", "btn btn-primary btn-itch-play");
+      itchBtn.href = game.play.itchPageUrl;
+      itchBtn.target = "_blank";
+      itchBtn.rel = "noopener noreferrer";
+      itchBtn.setAttribute("aria-label", `Play ${game.title} on itch.io`);
+      itchBtn.innerHTML = `<span>Play on itch.io</span> <span aria-hidden="true">↗</span>`;
+      container.appendChild(itchBtn);
+    }
+
+    // 4. View Details specification sheet
+    const detailsBtn = createEl(
+      "button",
+      isFeatured ? "btn btn-secondary btn-inspect-featured" : "btn btn-secondary"
+    );
+    detailsBtn.type = "button";
+    detailsBtn.setAttribute("data-inspect-game", game.id);
+    detailsBtn.setAttribute("aria-label", `View specifications for ${game.title}`);
+    detailsBtn.innerHTML = `<span>${isFeatured ? "View Details" : "Details"}</span>`;
+    detailsBtn.addEventListener("click", () => {
+      openGameSheetDialog(game);
+    });
+    container.appendChild(detailsBtn);
+  }
+
   /* ------------------------------------------------------------------------
      1. Hero Section & Featured Showcase Card
      ------------------------------------------------------------------------ */
@@ -115,7 +179,7 @@
       }
     }
 
-    // Connect Featured Project Actions
+    // Connect Featured Project Actions & Specs
     const featuredId = hero.featuredGameId || "cursed-harvest";
     const publishedGames = Array.isArray(content.games?.published)
       ? content.games.published
@@ -124,36 +188,23 @@
       publishedGames.find((g) => g.id === featuredId) || publishedGames[0];
 
     if (featuredGame) {
-      const primaryActionEl = document.getElementById("featured-primary-action");
-      if (primaryActionEl) {
-        if (isNonEmptyString(featuredGame.play?.embedBuildUrl)) {
-          // If a direct playable embed build is configured
-          primaryActionEl.setAttribute("href", "#");
-          primaryActionEl.removeAttribute("target");
-          primaryActionEl.removeAttribute("rel");
-          primaryActionEl.innerHTML = `<span>Play Here</span> <span class="play-icon" aria-hidden="true">▶</span>`;
-          primaryActionEl.addEventListener("click", (e) => {
-            e.preventDefault();
-            openPlayableGameDialog(featuredGame);
-          });
-        } else if (isNonEmptyString(featuredGame.play?.googlePlayUrl)) {
-          primaryActionEl.setAttribute("href", featuredGame.play.googlePlayUrl);
-          primaryActionEl.setAttribute("target", "_blank");
-          primaryActionEl.setAttribute("rel", "noopener noreferrer");
-          primaryActionEl.innerHTML = `<span>Get it on Google Play</span> <span aria-hidden="true">↗</span>`;
-        } else {
-          // itch.io enforces CSP frame-ancestors; direct link opens game on itch.io
-          primaryActionEl.setAttribute("href", featuredGame.play?.itchPageUrl || "https://logmat.itch.io/");
-          primaryActionEl.setAttribute("target", "_blank");
-          primaryActionEl.setAttribute("rel", "noopener noreferrer");
-          primaryActionEl.innerHTML = `<span>Play on itch.io</span> <span aria-hidden="true">↗</span>`;
-        }
+      const titleEl = document.querySelector(".featured-title");
+      if (titleEl && isNonEmptyString(featuredGame.title)) {
+        titleEl.textContent = featuredGame.title;
+      }
+      const platformEl = document.querySelector(".featured-platform");
+      if (platformEl && isNonEmptyString(featuredGame.platform)) {
+        platformEl.textContent = featuredGame.platform;
+      }
+      const summaryEl = document.querySelector(".featured-summary");
+      if (summaryEl && isNonEmptyString(featuredGame.summary)) {
+        summaryEl.textContent = featuredGame.summary;
       }
 
-      const inspectBtn = document.querySelector(".btn-inspect-featured");
-      if (inspectBtn) {
-        inspectBtn.addEventListener("click", () => {
-          openGameSheetDialog(featuredGame);
+      const actionsContainer = document.getElementById("featured-card-actions");
+      if (actionsContainer) {
+        populateGameActionButtons(featuredGame, actionsContainer, {
+          isFeatured: true
         });
       }
     }
@@ -265,50 +316,13 @@
 
         body.appendChild(specsDl);
 
-        // Footer Actions: Play button + Details button
+        // Footer Actions: Play button(s) + Details button
         const footer = createEl("div", "showcase-footer");
         const actionsWrap = createEl("div", "showcase-footer-actions");
 
-        if (isNonEmptyString(game.play?.embedBuildUrl)) {
-          // Play Here in-portfolio modal button
-          const playBtn = createEl("button", "btn btn-primary");
-          playBtn.type = "button";
-          playBtn.setAttribute("data-play-game", game.id);
-          playBtn.setAttribute("aria-label", `Play ${game.title} inside portfolio`);
-          playBtn.innerHTML = `<span>Play Here</span> <span class="play-icon" aria-hidden="true">▶</span>`;
-          playBtn.addEventListener("click", () => {
-            openPlayableGameDialog(game);
-          });
-          actionsWrap.appendChild(playBtn);
-        } else if (isNonEmptyString(game.play?.googlePlayUrl)) {
-          // Google Play external store button
-          const playStoreBtn = createEl("a", "btn btn-primary btn-google-play");
-          playStoreBtn.href = game.play.googlePlayUrl;
-          playStoreBtn.target = "_blank";
-          playStoreBtn.rel = "noopener noreferrer";
-          playStoreBtn.setAttribute("aria-label", `Get ${game.title} on Google Play`);
-          playStoreBtn.innerHTML = `<span>Get it on Google Play</span> <span aria-hidden="true">↗</span>`;
-          actionsWrap.appendChild(playStoreBtn);
-        } else {
-          // itch.io external play button
-          const itchBtn = createEl("a", "btn btn-primary");
-          itchBtn.href = game.play?.itchPageUrl || "https://logmat.itch.io/";
-          itchBtn.target = "_blank";
-          itchBtn.rel = "noopener noreferrer";
-          itchBtn.setAttribute("aria-label", `Play ${game.title} on itch.io`);
-          itchBtn.innerHTML = `<span>Play on itch.io</span> <span aria-hidden="true">↗</span>`;
-          actionsWrap.appendChild(itchBtn);
-        }
-
-        const detailsBtn = createEl("button", "btn btn-secondary");
-        detailsBtn.type = "button";
-        detailsBtn.setAttribute("data-inspect-game", game.id);
-        detailsBtn.setAttribute("aria-label", `View specifications for ${game.title}`);
-        detailsBtn.innerHTML = `<span>Details</span>`;
-        detailsBtn.addEventListener("click", () => {
-          openGameSheetDialog(game);
+        populateGameActionButtons(game, actionsWrap, {
+          isFeatured: false
         });
-        actionsWrap.appendChild(detailsBtn);
 
         footer.appendChild(actionsWrap);
         card.append(mediaWrap, body, footer);

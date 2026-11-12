@@ -30,14 +30,16 @@ Published games feature real covers, verified gameplay screenshots, verified con
 - [x] **Official Jam Ranking**: 40th Place (Community Choice, Score: 2.465, 10 ratings).
 - [x] **Badge**: `"40th Place · Synty Spooky Jam 2026"` with link to `"View Jam Results"` (`https://itch.io/jam/synty-spooky-jam-oct26/results`).
 - [x] **Third-Party Asset Notice**: Built in Unity using stylized 3D environment and character assets from Synty Studios.
-- [x] **Platform**: Browser / WebGL.
-- [x] **Play Integration**: Functional `"Play on itch.io ↗"` action directing users to the official playable page.
+- [x] **Platforms**: Android · Browser (WebGL).
+- [x] **Status**: Released.
+- [x] **Google Play Release**: `https://play.google.com/store/apps/details?id=com.logmat.cursedharvest`
+- [x] **Play Integration**: Dual verified actions: `"Get it on Google Play ↗"` (Android) and `"Play on itch.io ↗"` (Browser).
 - [x] **Local Assets**:
   - `assets/games/cursed-harvest-cover.png`
   - `assets/games/cursed-harvest-screen-1.png`
   - `assets/games/cursed-harvest-screen-2.png`
   - `assets/games/cursed-harvest-screen-3.png`
-- [x] **Verified Controls**: WASD (Move), ESC (Pause), Mouse (UI), ENTER (Confirm).
+- [x] **Verified Controls**: WASD / Virtual Touch (Move), ESC / Pause (Pause game), Mouse / Tap (UI), ENTER / Button (Confirm).
 
 ### 2.2 My Shadow Quit: The Last Flame
 - [x] **Official Jam**: AI Browser Game Jam 5 (Theme: Torch).
