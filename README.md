@@ -76,18 +76,18 @@ All texts, games, music embeds, and contact details are managed in `js/content.j
 - `My Shadow Quit: The Last Flame`: AI Browser Game Jam 5 (Theme: Torch, WebGL).
 - `1% Battery`: Mobile arcade runner published on Google Play (`com.logmat.onepercentbattery`).
 - `Gravity Switch`: Mobile arcade runner published on Google Play (`com.logmat.gravityswitch`).
+- `RECOIL EXPRESS: LUCKY CHAMBER`: Official 2026 Unity Game Jam entry (Unity, Browser / WebGL) on itch.io.
+- `Last Light`: 2026 Epic AI MegaJam entry (Unreal Engine, macOS download) on itch.io.
 - Direct external links to Google Play and itch.io are displayed by default. If you configure a direct embed build URL in `play.embedBuildUrl`, the "Play Here" in-portfolio modal button activates automatically for browser builds.
 
 ### 2.2 Projects in Development (`games.inDevelopment`)
-Secondary section strictly featuring the 8 confirmed in-development titles:
+Secondary section featuring the 6 confirmed in-development titles:
 1. `The Floor Is Dying` (DEV-01)
 2. `The Last Train` (DEV-02)
 3. `Necromancers Deck` (DEV-03)
 4. `Don’t Follow My Voice` (DEV-04)
-5. `Last Light` (DEV-05)
-6. `Memory Ghost` (DEV-06)
-7. `Flesh Circuit` (DEV-07)
-8. `Recoil Express` (DEV-08)
+5. `Memory Ghost` (DEV-05)
+6. `Flesh Circuit` (DEV-06)
 
 ### 2.3 Streaming Music (`music`)
 - `music.players.spotify`: Spotify artist embed code (`5Zq2V6HMOv0bzVRYX0ett6`).

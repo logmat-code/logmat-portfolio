@@ -41,6 +41,14 @@ Published games feature real covers, verified gameplay screenshots, verified con
   - `assets/games/cursed-harvest-screen-3.png`
 - [x] **Verified Controls**: WASD / Virtual Touch (Move), ESC / Pause (Pause game), Mouse / Tap (UI), ENTER / Button (Confirm).
 
+### 2.3 RECOIL EXPRESS: LUCKY CHAMBER (published, itch.io)
+- [x] Jam: Official 2026 Unity Game Jam (theme: Lucky Number). Unity, Browser / WebGL. Link: `https://logmat.itch.io/recoil-express`.
+- [x] Official cover + 3 screenshots from the itch.io page. Description from the public page.
+
+### 2.4 Last Light (published, itch.io)
+- [x] Jam: 2026 Epic AI MegaJam. Unreal Engine, macOS (Apple Silicon download, ad hoc signed, not notarized). Link: `https://logmat.itch.io/last-light` ("View on itch.io").
+- [x] Official cover (the page has no other screenshots).
+
 ### 2.2 My Shadow Quit: The Last Flame
 - [x] **Official Jam**: AI Browser Game Jam 5 (Theme: Torch).
 - [x] **Badge**: `"AI Browser Game Jam 5"` with link to `"View Jam Page"` (`https://itch.io/jam/ai-jam-5`).
@@ -89,13 +97,11 @@ Secondary section strictly featuring verified in-development titles. Excluded pr
 2. [x] **The Last Train** (`DEV-02`): Verified English concept summary configured (mechanics presented as planned design concepts). Engine: Unity.
 3. [x] **Necromancers Deck** (`DEV-03`): Exact title preserved. Verified English concept summary configured. Engine: Unity.
 4. [x] **Don’t Follow My Voice** (`DEV-04`): Verified English concept summary configured.
-5. [x] **Last Light** (`DEV-05`): Verified English concept summary and extended session scope configured. First-person horror in an underground power station with limited battery flashlight mechanics. Status: In Development.
-6. [x] **Memory Ghost** (`DEV-06`): Narrative investigation concept exploring case structure, evidence and deduction systems, and production direction for a 2D pixel-art vertical slice.
+5. [x] **Memory Ghost** (`DEV-05`): Narrative investigation concept exploring case structure, evidence and deduction systems, and production direction for a 2D pixel-art vertical slice.
    - [ ] *Needed when ready for public testing / release*: Public itch.io or store listing, playable build / demo, confirmed game engine, visual asset pack / gameplay screenshots.
-7. [x] **Flesh Circuit** (`DEV-07`): 2D metroidvania concept designed for Metroidvania Month Finale, exploring interconnected exploration and ability-based progression.
+6. [x] **Flesh Circuit** (`DEV-06`): 2D metroidvania concept designed for Metroidvania Month Finale, exploring interconnected exploration and ability-based progression.
    - [ ] *Needed when ready for public testing / release*: Public itch.io page, playable build / demo, confirmed engine, gameplay screenshots.
-8. [x] **Recoil Express** (`DEV-08`): Roguelite project exploring upgrade rarity, capped stacking, achievement unlocks, shops, and healing rules.
-   - [ ] *Needed when ready for public testing / release*: Public itch.io or store page, playable build / demo, confirmed engine, gameplay screenshots.
+
 
 ---
 

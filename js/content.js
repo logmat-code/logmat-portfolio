@@ -224,6 +224,77 @@ window.PORTFOLIO_CONTENT = {
         play: {
           googlePlayUrl: "https://play.google.com/store/apps/details?id=com.logmat.gravityswitch"
         }
+      },
+      {
+        id: "recoil-express",
+        code: "JAM-03",
+        title: "RECOIL EXPRESS: LUCKY CHAMBER",
+        badge: "Official 2026 Unity Game Jam",
+        badgeUrl: "https://itch.io/jam/official-unity-game-jam-2026",
+        badgeActionLabel: "View Jam Page",
+        summary:
+          "A top-down action roguelite where gun recoil is your only way to move. Aim opposite your destination, fire to launch yourself across the room, and make every seventh shot count.",
+        extendedDescription:
+          "The pistol, shotgun, and SMG share one shot counter: every seventh shot pierces enemies, deals 50% more damage, and gives 60% more recoil. Fight through 12 industrial chambers, spend Scrap on repairs and upgrades, and face RECOIL PROTOTYPE 07, a three-phase boss. Made for the Official 2026 Unity Game Jam (theme: Lucky Number).",
+        status: "Released",
+        platform: "Browser / WebGL",
+        jam: "Official 2026 Unity Game Jam",
+        jamResult: "Official Jam Entry",
+        engine: "Unity",
+        controls: [
+          { key: "Mouse", action: "Aim" },
+          { key: "Left click", action: "Fire and propel yourself backward" },
+          { key: "1 / 2 / 3 or Wheel", action: "Switch weapons" },
+          { key: "R", action: "Reload" },
+          { key: "E", action: "Interact with terminals, shops, and exit doors" },
+          { key: "Esc", action: "Pause" }
+        ],
+        media: {
+          coverImage: "assets/games/recoil-express-cover.png",
+          coverAlt: "RECOIL EXPRESS: LUCKY CHAMBER official cover artwork",
+          screenshots: [
+            { src: "assets/games/recoil-express-screen-1.png", alt: "RECOIL EXPRESS gameplay screenshot", caption: "Recoil-powered movement through industrial chambers" },
+            { src: "assets/games/recoil-express-screen-2.png", alt: "RECOIL EXPRESS combat screenshot", caption: "Shared shot counter across weapons" },
+            { src: "assets/games/recoil-express-screen-3.png", alt: "RECOIL EXPRESS boss and chamber screenshot", caption: "Chamber routes and boss encounter" }
+          ]
+        },
+        play: {
+          itchPageUrl: "https://logmat.itch.io/recoil-express",
+          embedBuildUrl: ""
+        }
+      },
+      {
+        id: "last-light",
+        code: "JAM-04",
+        title: "Last Light",
+        badge: "2026 Epic AI MegaJam",
+        badgeUrl: "https://itch.io/jam/2026-epic-ai-megajam",
+        badgeActionLabel: "View Jam Page",
+        summary:
+          "A first-person horror game set in an underground power station. Share a limited battery between your flashlight, which repels a stalking creature, and three terminals needed to unlock the escape elevator.",
+        extendedDescription:
+          "Designed for a 5–8 minute session, with exploration, energy management, and a final return to the elevator. Made for the 2026 Epic AI MegaJam.",
+        status: "Released",
+        platform: "macOS (Apple Silicon download)",
+        jam: "2026 Epic AI MegaJam",
+        jamResult: "Official Jam Entry",
+        engine: "Unreal Engine",
+        controls: [
+          { key: "WASD / Mouse", action: "Move and look" },
+          { key: "Right mouse / F", action: "Toggle flashlight" },
+          { key: "E", action: "Interact and confirm" },
+          { key: "Esc / P", action: "Pause" }
+        ],
+        media: {
+          coverImage: "assets/games/last-light-cover.png",
+          coverAlt: "Last Light official cover artwork",
+          screenshots: []
+        },
+        play: {
+          itchPageUrl: "https://logmat.itch.io/last-light",
+          itchLabel: "View on itch.io",
+          embedBuildUrl: ""
+        }
       }
     ],
 
@@ -268,18 +339,8 @@ window.PORTFOLIO_CONTENT = {
           "A first-person narrative horror game built around conflicting voice instructions, evidence-based puzzles, and consequential choices."
       },
       {
-        id: "last-light",
-        code: "DEV-05",
-        title: "Last Light",
-        status: "In Development",
-        summary:
-          "A first-person horror game set in an underground power station. Share a limited battery between your flashlight, which repels a stalking creature, and three terminals needed to unlock the escape elevator.",
-        extendedDescription:
-          "Designed for a 5–8 minute session, with exploration, energy management, and a final return to the elevator."
-      },
-      {
         id: "memory-ghost",
-        code: "DEV-06",
+        code: "DEV-05",
         title: "Memory Ghost",
         status: "In Development",
         summary:
@@ -287,19 +348,11 @@ window.PORTFOLIO_CONTENT = {
       },
       {
         id: "flesh-circuit",
-        code: "DEV-07",
+        code: "DEV-06",
         title: "Flesh Circuit",
         status: "In Development",
         summary:
           "A 2D metroidvania concept designed for Metroidvania Month Finale, exploring interconnected exploration, ability-based progression, and focused scope."
-      },
-      {
-        id: "recoil-express",
-        code: "DEV-08",
-        title: "Recoil Express",
-        status: "In Development",
-        summary:
-          "A roguelite project exploring upgrade rarity, capped stacking, achievement unlocks, shops, healing rules, and reward progression."
       }
     ]
   },

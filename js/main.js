@@ -115,8 +115,8 @@
       itchBtn.href = game.play.itchPageUrl;
       itchBtn.target = "_blank";
       itchBtn.rel = "noopener noreferrer";
-      itchBtn.setAttribute("aria-label", `Play ${game.title} on itch.io`);
-      itchBtn.innerHTML = `<span>Play on itch.io</span> <span aria-hidden="true">↗</span>`;
+      itchBtn.setAttribute("aria-label", `${game.play.itchLabel || "Play"} ${game.title}${game.play.itchLabel ? "" : " on itch.io"}`);
+      itchBtn.innerHTML = `<span>${game.play.itchLabel || "Play on itch.io"}</span> <span aria-hidden="true">↗</span>`;
       container.appendChild(itchBtn);
     }
 
